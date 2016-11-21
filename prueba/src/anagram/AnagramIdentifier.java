@@ -16,9 +16,8 @@ public class AnagramIdentifier {
 				countEqualLetters++;
 			}
 		}
-		if ((countEqualLetters == word1.length())) {
-			return true;
-		}
-		return false;
+		return countEqualLetters == word1.length() ;
+			
+	
 	}
 }
