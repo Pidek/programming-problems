@@ -16,7 +16,7 @@ public class Main {
 		
 		anagram.anagramDetect(word1, word2);
 		
-		if (anagram.anagramDetect(word1, word2) == true) {
+		if (anagram.anagramDetect(word1, word2) ) {
 			System.out.println("Are an anagram");
 		} else {
 			System.out.println("Are not an anagram");

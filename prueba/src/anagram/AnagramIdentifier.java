@@ -4,22 +4,26 @@ public class AnagramIdentifier {
 
 	public boolean anagramDetect(String word1, String word2) {
 
-		boolean areAnagram;
-		int letterWord2;
-		int countEqualLetters = 0;
+		if (word1.length() == word2.length()) {
 
-		for (int letterWord1 = 0; letterWord1 < word1.length() - 1; letterWord1++) {
-			letterWord2 = word2.length() - letterWord1 - 1;
-			if (word1.charAt(letterWord1) == word2.charAt(letterWord2)) {
-				countEqualLetters++;
+			int j;
+			int countEqualLetters = 0;
+
+			for (int i = 0; i < word1.length() - 1; i++) {
+				j = word2.length() - i - 1;
+				if (word1.charAt(i) == word2.charAt(j)) {
+					countEqualLetters++;
+				}
+			}
+			if ((countEqualLetters == word1.length() - 1)) {
+				return true;
+			} else {
+				return false;
 			}
 		}
-		if ((countEqualLetters == word1.length() - 1)
-				&& (word1.length() == word2.length())) {
-			areAnagram = true;
-		} else {
-			areAnagram = false;
+
+		else {
+			return false;
 		}
-		return areAnagram;
 	}
 }
