@@ -5,21 +5,19 @@ public class PalindromeIdentifier {
 	public boolean palindromeDetect(String phrase) {
 
 		String palindrome = phrase.replace(" ", "");
-		
-		boolean itsPalindrome;
-		int last;
+
+		int j;
 		int countEqualLetters = 0;
-		for (int first = 0; first < palindrome.length() - 1; first++) {
-			last = palindrome.length() - first - 1;
-			if (palindrome.charAt(first) == palindrome.charAt(last)) {
+		for (int i = 0; i < palindrome.length() - 1; i++) {
+			j = palindrome.length() - i - 1;
+			if (palindrome.charAt(i) == palindrome.charAt(j)) {
 				countEqualLetters++;
 			}
 		}
 		if (countEqualLetters == palindrome.length() - 1) {
-			itsPalindrome = true;
-		} else {
-			itsPalindrome = false;
+			return true;
 		}
-		return itsPalindrome;
+		return false;
+
 	}
 }
