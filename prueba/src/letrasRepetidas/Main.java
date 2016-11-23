@@ -10,7 +10,6 @@ public class Main {
 		System.out.println("Give me a word: ");
 		String word = scan.next();
 		WordsAnalizer wordAnalizer = new WordsAnalizer();
-		wordAnalizer.fillLettersInMap(word);
 		System.out.println(wordAnalizer.lettersRepeatedCounter(word));
 
 	}
